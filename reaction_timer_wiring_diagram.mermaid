@@ -21,12 +21,3 @@ flowchart LR
     P2 --> BTNA
     BTNA -. connects to other side only while pressed .-> BTNB
     BTNB --> G2
-
-    classDef arduinoStyle fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    classDef signalStyle fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    classDef groundStyle fill:#e5e7eb,stroke:#374151,stroke-width:2px
-    classDef componentStyle fill:#fecaca,stroke:#dc2626,stroke-width:2px
-
-    class P8,P2 signalStyle
-    class G1,G2 groundStyle
-    class R,LEDA,LEDC,BTNA,BTNB componentStyle
