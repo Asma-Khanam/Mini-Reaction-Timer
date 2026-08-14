@@ -53,7 +53,8 @@ The wait before the light turns on is randomized on purpose. If it always came a
 | Button pin one | Arduino pin 2 |
 | Button pin two | Arduino GND |
 
-​```mermaid
+​```
+mermaid
 flowchart LR
     subgraph Arduino["Arduino Uno"]
         P8["Pin 8 (signal out)"]
