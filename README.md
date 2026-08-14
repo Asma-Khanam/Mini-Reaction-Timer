@@ -53,8 +53,9 @@ The wait before the light turns on is randomized on purpose. If it always came a
 | Button pin one | Arduino pin 2 |
 | Button pin two | Arduino GND |
 
-​```
-mermaid
+---
+
+​```mermaid
 flowchart LR
     subgraph Arduino["Arduino Uno"]
         P8["Pin 8 (signal out)"]
@@ -78,7 +79,7 @@ flowchart LR
     P2 --> BTNA
     BTNA -. connects to other side only while pressed .-> BTNB
     BTNB --> G2
-​```
+```
 
 The button uses the Arduino's built in pull up resistor (`INPUT_PULLUP`), so no extra resistor is needed for it. The pin reads HIGH normally and drops to LOW the instant it is pressed.
 
