@@ -1,3 +1,5 @@
+<img width="807" height="1068" alt="Reaction timer build photo" src="https://github.com/user-attachments/assets/7828eab2-d789-4cb1-9525-fed762430552" />
+
 # Mini Reaction Timer
 
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?logo=arduino&logoColor=white)
@@ -53,9 +55,7 @@ The wait before the light turns on is randomized on purpose. If it always came a
 | Button pin one | Arduino pin 2 |
 | Button pin two | Arduino GND |
 
----
-
-​```mermaid
+```mermaid
 flowchart LR
     subgraph Arduino["Arduino Uno"]
         P8["Pin 8 (signal out)"]
@@ -93,7 +93,7 @@ The sketch uses `millis()`, a built in Arduino function that counts milliseconds
 
 ## Sample output
 
-​```
+```
 Get ready...
 Reaction time: 365 ms
 Get ready...
@@ -106,7 +106,7 @@ Get ready...
 Reaction time: 1102 ms
 Get ready...
 Reaction time: 384 ms
-​```
+```
 
 That single 1102 ms result stands well outside the rest. In vigilance research, a sudden slow response surrounded by otherwise normal ones is called a **lapse**, a brief drop in attention even while someone is technically awake and paying attention. Catching one in a homemade six sample test is a nice little demonstration of how noisy and human this kind of data really is.
 
@@ -122,6 +122,8 @@ Average reaction time here (excluding the lapse) sits a little above the roughly
 4. Open the Serial Monitor, set the baud rate to 9600.
 5. Watch the LED, press the button the instant it lights up.
 
-----
+---
 
-<img width="807" height="1068" alt="Screenshot 2026-08-15 at 12 29 41 AM" src="https://github.com/user-attachments/assets/7828eab2-d789-4cb1-9525-fed762430552" />
+## License
+
+MIT, feel free to reuse or adapt.
