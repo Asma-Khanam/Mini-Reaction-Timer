@@ -34,6 +34,42 @@ Full wiring diagram: `reaction_timer_wiring_diagram.mermaid` (included in this r
 
 The button uses the Arduino's built in pull up resistor (`INPUT_PULLUP`), so no extra resistor is needed for it. The pin reads HIGH normally and drops to LOW the instant it is pressed.
 
+
+| From | To |
+|---|---|
+| LED anode (long leg) | 220 ohm resistor, then Arduino pin 8 |
+| LED cathode (short leg) | Arduino GND |
+| Button pin one | Arduino pin 2 |
+| Button pin two | Arduino GND |
+
+```mermaid
+flowchart LR
+    subgraph Arduino["Arduino Uno"]
+        P8["Pin 8 (signal out)"]
+        P2["Pin 2 (signal in)"]
+        G1["GND"]
+        G2["GND"]
+    end
+
+    subgraph Breadboard["Breadboard"]
+        R["220 ohm resistor"]
+        LEDA["LED anode, long leg, positive"]
+        LEDC["LED cathode, short leg, negative"]
+        BTNA["Button pin A"]
+        BTNB["Button pin B"]
+    end
+
+    P8 --> R --> LEDA
+    LEDA -. diode, current flows one direction only .-> LEDC
+    LEDC --> G1
+
+    P2 --> BTNA
+    BTNA -. connects to other side only while pressed .-> BTNB
+    BTNB --> G2
+```
+
+The button uses the Arduino's built in pull up resistor (`INPUT_PULLUP`), so no extra resistor is needed for it. The pin reads HIGH normally and drops to LOW the instant it is pressed.
+
 ## How the timing works
 
 The sketch uses `millis()`, a built in Arduino function that counts milliseconds since the board powered on. The moment the LED turns on, the current millisecond count is stored. The moment the button is pressed, the count is taken again, and the difference between the two is the reaction time.
