@@ -1,0 +1,32 @@
+flowchart LR
+    subgraph Arduino["Arduino Uno"]
+        P8["Pin 8 (signal out)"]
+        P2["Pin 2 (signal in)"]
+        G1["GND"]
+        G2["GND"]
+    end
+
+    subgraph Breadboard["Breadboard"]
+        R["220 ohm resistor"]
+        LEDA["LED anode, long leg, positive"]
+        LEDC["LED cathode, short leg, negative"]
+        BTNA["Button pin A"]
+        BTNB["Button pin B"]
+    end
+
+    P8 --> R --> LEDA
+    LEDA -. diode, current flows one direction only .-> LEDC
+    LEDC --> G1
+
+    P2 --> BTNA
+    BTNA -. connects to other side only while pressed .-> BTNB
+    BTNB --> G2
+
+    classDef arduinoStyle fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef signalStyle fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    classDef groundStyle fill:#e5e7eb,stroke:#374151,stroke-width:2px
+    classDef componentStyle fill:#fecaca,stroke:#dc2626,stroke-width:2px
+
+    class P8,P2 signalStyle
+    class G1,G2 groundStyle
+    class R,LEDA,LEDC,BTNA,BTNB componentStyle
