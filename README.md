@@ -1,5 +1,3 @@
-<img width="807" height="1068" alt="Reaction timer build photo" src="https://github.com/user-attachments/assets/7828eab2-d789-4cb1-9525-fed762430552" />
-
 # Mini Reaction Timer
 
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?logo=arduino&logoColor=white)
@@ -124,6 +122,4 @@ Average reaction time here (excluding the lapse) sits a little above the roughly
 
 ---
 
-## License
-
-MIT, feel free to reuse or adapt.
+<img width="807" height="1068" alt="Reaction timer build photo" src="https://github.com/user-attachments/assets/7828eab2-d789-4cb1-9525-fed762430552" />
