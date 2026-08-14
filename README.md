@@ -1,5 +1,9 @@
 # Mini Reaction Timer
 
+![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?logo=arduino&logoColor=white)
+
+![Status](https://img.shields.io/badge/Status-Just%20for%20fun-lightgrey)
+
 A tiny Arduino build made for fun during a break from my MSc dissertation work. It measures human reaction time using an LED, a push button, and the Arduino's internal clock.
 
 This is a personal side project, not a research study, and not connected to any formal academic work.
@@ -63,6 +67,3 @@ Average reaction time here (excluding the lapse) sits a little above the roughly
 4. Open the Serial Monitor, set the baud rate to 9600.
 5. Watch the LED, press the button the instant it lights up.
 
-## License
-
-MIT, feel free to reuse or adapt.
